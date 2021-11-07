@@ -2,20 +2,20 @@
 #include <linux/kernel.h>
 #include <linux/init.h>
 
-#define DRIVER_AUTHOR "Adam+Harneet"
-#define DRIVER_DESC "4AA4 Lab2 Part3"
+#define DRIVER_AUTHOR    "Adam+Harneet"
+#define DRIVER_DESC      "4AA4 Lab2 Part3"
 
 static char *my_name = "harneet";
 
 static int __init init_custom_module(void)
 {
-    printk (KERN_INFO  "Hello dummy world %s\n", my_name);
-    return 0;
+  printk(KERN_INFO  "Hello dummy world %s\n", my_name);
+  return 0;
 }
 
 static void __exit cleanup_custom_module(void)
 {
-    printk (KERN_INFO "Goodbye, %s\n", my_name);
+  printk(KERN_INFO "Goodbye, %s\n", my_name);
 }
 
 module_init(init_custom_module);
